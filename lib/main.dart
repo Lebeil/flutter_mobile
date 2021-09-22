@@ -35,6 +35,10 @@ class _Home extends State<Home> {
   @override
   Widget build(BuildContext context) {
     double largeur = MediaQuery.of(context).size.width;
+    final shape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    );
+
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
@@ -88,8 +92,21 @@ class _Home extends State<Home> {
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.black,
                 primary: Colors.blue,
-                elevation: 8,
+                elevation: 18,
+                shadowColor: Colors.red.withOpacity(0.9),
+                minimumSize: const Size(300, 100),
+                shape: shape,
               )
+            ),
+            OutlinedButton(
+              onPressed: boutonAppuye,
+              child: const Text('Je suis un bouton encadré!'),
+              style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.pink[50],
+                primary: Colors.green,
+                side: const BorderSide(width: 5, color: Colors.orange),
+                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
+              ),
             ),
             Container(
               height: largeur / 5,
