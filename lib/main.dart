@@ -78,7 +78,7 @@ class _Home extends State<Home> {
               }),
             Container(
               height: largeur / 5,
-              color: Colors.red,
+              color: Colors.blue,
               margin: const EdgeInsets.only(left:20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -104,8 +104,20 @@ class _Home extends State<Home> {
             )
           ]
         )
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: boutonAppuye,
+          elevation: 8,
+          tooltip: 'changer oui',
+          child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 
+  void boutonAppuye() {
+    setState(() {
+      oui = !oui;
+    });
+  }
 }
