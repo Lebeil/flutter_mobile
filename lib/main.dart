@@ -29,6 +29,9 @@ class Home extends StatefulWidget {
 }
 
 class _Home extends State<Home> {
+
+  bool oui = false;
+
   @override
   Widget build(BuildContext context) {
     double largeur = MediaQuery.of(context).size.width;
@@ -51,7 +54,7 @@ class _Home extends State<Home> {
           children: <Widget>[
             Text('Salut les codeurs',
               style: TextStyle(
-                color: Colors.grey[900],
+                color: (oui) ? Colors.grey[900] : Colors.red,
                 fontSize: 30,
                 fontStyle: FontStyle.italic,
               ),
@@ -65,6 +68,14 @@ class _Home extends State<Home> {
                ),
              ),
             ),
+            IconButton(
+              icon: const Icon(Icons.delete),
+              onPressed: () {
+                print('Bouton');
+                setState((){
+                  oui = !oui;
+                });
+              }),
             Container(
               height: largeur / 5,
               color: Colors.red,
