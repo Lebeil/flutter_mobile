@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(new MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class Home extends StatefulWidget {
 class _Home extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    double largeur = MediaQuery.of(context).size.width;
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
@@ -39,25 +42,71 @@ class _Home extends State<Home> {
             Icon(Icons.golf_course),
             Icon(Icons.directions_bike),
           ],
-          elevation: 10.0,
+          elevation: 10,
           centerTitle: true,
       ),
-      body: Container(
-        color: Colors.blue,
-        margin: const EdgeInsets.only(top: 20.0, bottom: 15.0),
-        child: const Center(
-          child: Text(
-            'Apprentissage des Widgets avec les cours Flutter',
-            textAlign: TextAlign.center,
-            textScaleFactor: 2.0,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20.0,
-              fontStyle: FontStyle.italic,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Text('Salut les codeurs',
+              style: TextStyle(
+                color: Colors.grey[900],
+                fontSize: 30,
+                fontStyle: FontStyle.italic,
+              ),
             ),
-            maxLines: 2,
-          ),
-        ),
+            Card(
+             child: SizedBox(
+               width: MediaQuery.of(context).size.width / 1.5,
+               height: 200,
+               child: Image.asset('images/landscape.jpg',
+                 fit: BoxFit.cover,
+               ),
+             ),
+            ),
+            Container(
+              height: largeur / 5,
+              color: Colors.red,
+              margin: const EdgeInsets.only(left:20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    height: largeur / 8,
+                    width: largeur / 8,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    height: largeur / 8,
+                    width: largeur / 8,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    height: largeur / 8,
+                    width: largeur / 8,
+                    color: Colors.indigo,
+                  ),
+                  Container(
+                    height: largeur / 8,
+                    width: largeur / 8,
+                    color: Colors.teal,
+                  ),
+                  Container(
+                    height: largeur / 8,
+                    width: largeur / 8,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    height: largeur / 8,
+                    width: largeur / 8,
+                    color: Colors.pink,
+                  ),
+                ]
+              )
+            )
+          ]
+        )
       )
     );
   }
