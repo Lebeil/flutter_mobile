@@ -72,35 +72,21 @@ class _Home extends State<Home> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Container(
-                    height: largeur / 8,
-                    width: largeur / 8,
-                    color: Colors.yellow,
+                  Icon(Icons.thumb_up,
+                    color: Colors.white,
+                    size: largeur / 10,
                   ),
-                  Container(
-                    height: largeur / 8,
-                    width: largeur / 8,
-                    color: Colors.blue,
+                  Icon(Icons.thumb_down,
+                    color: Colors.white,
+                    size: largeur / 10,
                   ),
-                  Container(
-                    height: largeur / 8,
-                    width: largeur / 8,
-                    color: Colors.indigo,
+                  Icon(Icons.palette,
+                    color: Colors.white,
+                    size: largeur / 10,
                   ),
-                  Container(
-                    height: largeur / 8,
-                    width: largeur / 8,
-                    color: Colors.teal,
-                  ),
-                  Container(
-                    height: largeur / 8,
-                    width: largeur / 8,
-                    color: Colors.black,
-                  ),
-                  Container(
-                    height: largeur / 8,
-                    width: largeur / 8,
-                    color: Colors.pink,
+                  Icon(Icons.directions_bike,
+                    color: Colors.white,
+                    size: largeur / 10,
                   ),
                 ]
               )
