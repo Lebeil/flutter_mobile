@@ -81,7 +81,15 @@ class _Home extends State<Home> {
               child: const Text(
                 'appuyé moi',
               ),
-
+            ),
+            ElevatedButton(
+              onPressed: boutonAppuye,
+              child: const Text('Je suis plus haut que toi !'),
+              style: ElevatedButton.styleFrom(
+                onPrimary: Colors.black,
+                primary: Colors.blue,
+                elevation: 8,
+              )
             ),
             Container(
               height: largeur / 5,
