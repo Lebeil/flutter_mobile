@@ -76,6 +76,13 @@ class _Home extends State<Home> {
                   oui = !oui;
                 });
               }),
+            TextButton(
+              onPressed: boutonAppuye,
+              child: const Text(
+                'appuyé moi',
+              ),
+
+            ),
             Container(
               height: largeur / 5,
               color: Colors.blue,
