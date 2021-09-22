@@ -45,20 +45,19 @@ class _Home extends State<Home> {
       body: Container(
         color: Colors.blue,
         margin: const EdgeInsets.only(top: 20.0, bottom: 15.0),
-        child: Center(
-          child: Card(
-            elevation: 5.0,
-            color: Colors.teal,
-            child: SizedBox(
-              width: 300.0,
-              height: 250.0,
-              child: Image.asset(
-                'images/landscape.jpg',
-                fit: BoxFit.cover,
-              )
+        child: const Center(
+          child: Text(
+            'Apprentissage des Widgets avec les cours Flutter',
+            textAlign: TextAlign.center,
+            textScaleFactor: 2.0,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+              fontStyle: FontStyle.italic,
             ),
-          )
-        )
+            maxLines: 2,
+          ),
+        ),
       )
     );
   }
